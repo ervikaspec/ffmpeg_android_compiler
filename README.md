@@ -54,7 +54,7 @@ The `ffmpeg` binary should in folder `$FINAL_DIR/$TARGET/$FLAVOR/ffmpeg` after b
 
 You may encounter one or many of these problems listed here while compiling latest source code of ffmpeg. Here's how I solved them:
 
-# Problem 1
+### Problem 1
 After running the script I got this:
  
 ```bash
@@ -76,7 +76,7 @@ sudo apt install gcc-arm-linux-androideabi -y
 ```
  
  
-# Problem 2
+### Problem 2
 After rerunning the script I got this:
 
 ```bash
@@ -91,7 +91,7 @@ make: *** [libavcodec/aaccoder.o] Error 1
 
 I don't know how to solve it "properly", so I just did very simple fix. I replaced every occurance of B0 by b0 in aaccoder.c and then built it. It helped.
  
-# Problem 3
+### Problem 3
 But that's not all. Same problem causes this error:
  
 ```bash
@@ -107,7 +107,7 @@ ffbuild/common.mak:60: recipe for target 'libavcodec/hevc_mvs.o' failed
  
 Solution here is the same. Just replace B0 by b0 in hevc_mvs.c and type make.
  
-# Problem 4
+### Problem 4
 Same story here:
  
 ```bash
@@ -120,7 +120,7 @@ make: *** [libavcodec/opus_pvq.o] Error 1
  
 Replace B0 by b0 in opus_pvq.c and type make.
  
-# Problem 5
+### Problem 5
 stdio.h not found!!!
  
 ```bash
